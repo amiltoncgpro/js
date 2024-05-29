@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            font: normal 20px Arial;
+            background: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"> <!--No html-->
+        Interaja...
+    </div>
+    <script>
+        // Assim essa var pode ser acessada por todas function mas não é recomendável porque tem problema de uso de memória
+        var a = window.document.getElementById('area')
+
+        /* Usando addEventListener no js
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair) */
+
+        function clicar() {
+            // Não é necessário usar [] porque tem apenas uma tag 
+            // Melhor forma a se fazer // var a = window.document.getElementById('area')
+            // window.document.getElementById('area').innerText = 'Clicou'
+            a.innerText = 'Clicou!'
+            a.style.background = 'red'
+        }
+        function entrar() {
+            a.innerText = 'Entrou!'
+        }
+        function sair() {
+            a.innerText = 'Saiu!'
+            a.style.background = 'green'
+        }
+    </script>
+</body>
+</html> 
