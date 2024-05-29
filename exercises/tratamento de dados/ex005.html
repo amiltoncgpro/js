@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus primeiros passos com o DOM</title>
+    <style>
+        body {
+            background: rgb(92, 165, 210);
+            color: white;
+            font: normal 18px Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com o DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em Javascript</p>
+    <div id="msg">Click em mim</div> <!-- Só muda o selector na div -->
+    <script>
+        // Exemplos
+        // window.document.write('Olá mundo!')
+        // window.document.write(window.document.charset)
+        // window.document.write(window.navigator.appName)
+        // window.document.write(window.document.URL)
+
+
+        // TagName
+        //var corpo = window.document.body
+        //var p1 = window.document.getElementsByTagName('p')[1]
+        /* window.document.write('Está escrito assim.' + p1.innerText)
+        p1.style.color = "blue"
+        corpo.style.background = "black" */
+
+        // window.document.write(p1.innerHTML)
+
+        // innerText - apenas o texto
+        // innerHTML - o texto e a sua formatação
+
+
+        // Id
+        /*
+        var d = window.document.getElementById('msg')
+        d.style.background = "green"
+        // d.innerText = 'Estou aguardando...'
+        window.document.getElementById('msg').innerText = "Olá!"*/
+
+
+        // Name
+        // var d = window.document.getElementsByName('msg')[0]
+        // d.innerText = 'Olá!'
+
+
+        // Classe
+        // window.document.getElementsByClassName('msg')[0].innerText = 'Tudo bem!'
+
+
+        // QuerySelector
+        var d = window.document.querySelector('#msg')
+        d.style.color = 'yellow'
+    </script>
+</body>
+</html>
